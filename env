@@ -1,0 +1,4 @@
+export cbe_src_dir=`pwd`
+export cbe_install_dir=$HOME/cura
+export PATH=$cbe_install_dir/bin:$PATH
+export PKG_CONFIG_PATH=$cbe_install_dir/lib/pkgconfig:$PKG_CONFIG_PATH

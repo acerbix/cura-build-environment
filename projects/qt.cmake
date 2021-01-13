@@ -58,14 +58,18 @@ elseif(BUILD_OS_WINDOWS)
     list(APPEND qt_options -opengl desktop)
 elseif(BUILD_OS_LINUX)
     list(APPEND qt_options
-	 -rpath
+     # -device linux-rasp-pi-g++  -device-option CROSS_COMPILE=/usr/bin
+     -rpath
 	 -pkg-config
-	 -opengl desktop -no-gtk
-	 -qt-xcb
+	 -opengl desktop -egl  -eglfs -no-gtk
+     # -qt-xcb
+     -qpa eglfs
 	 -fontconfig
 	 -system-freetype
 	 -system-zlib
 	 -ssl -openssl-runtime
+     -I /opt/vc/include 
+     -L /opt/vc/lib
 	 -I "${CMAKE_INSTALL_PREFIX}/include"
 	 -L "${CMAKE_INSTALL_PREFIX}/lib")
 endif()
