@@ -62,8 +62,8 @@ elseif(BUILD_OS_LINUX)
      -rpath
 	 -pkg-config
 	 -opengl desktop -egl  -eglfs -no-gtk
-     # -qt-xcb
-     -qpa eglfs
+     -qt-xcb
+     # -qpa eglfs
 	 -fontconfig
 	 -system-freetype
 	 -system-zlib
